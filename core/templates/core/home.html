@@ -5,5 +5,16 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Home</h1>
+    <h3>Homepage</h3>
+    <h6>
+        {% if name %}
+            {{ name }}
+        {% endif %}
+        {% if age %}
+            {{ age }}
+        {% endif %}
+    </h6>
+    {% if profile_picture %}
+        <img width="200px" src="{{ profile_picture.url }}" alt="user_profile">
+    {% endif %}
 {% endblock %}
